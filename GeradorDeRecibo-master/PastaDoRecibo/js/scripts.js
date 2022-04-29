@@ -80,6 +80,9 @@ gerar.addEventListener("click", function(){
     var nome_emissor = document.getElementById("nome_emissor").value;
     var telefone = document.getElementById("telefone").value;
     var cpf_2 = document.getElementById("cpf_2").value;
+    var quem_recebeu = document.getElementById("quem_recebeu").value;
+    var banco = document.getElementById("banco").value;
+    var chave = document.getElementById("chave").value;
     
     if(dinheiroGerar == true){
         var dinheiroGerarContent = document.getElementById("dinheiroGerar");
@@ -96,6 +99,7 @@ gerar.addEventListener("click", function(){
     }else if(pixGerar == true){
         var pixGerarContent = document.getElementById("pixGerar");
         pixGerarContent.style.display = "block";
+        var retornoRecibo = "Recebi(emos) de " + nome_pagador +" - CPF/CNPJ nº "+ cpf +", a importância de um centavos referente à "+referente +". Para maior clareza firmo(amos) o presente recibo para que produza os seus efeitos, dando plena, rasa e irrevogável quitação, pelo valor recebido.Pagamento recebido por: " + quem_recebeu + " - chave pix: "+ chave +" - "+ banco;
     }else if(chequeGerar == true){
         var chequeGerarContent = document.getElementById("chequeGerar");
         chequeGerarContent.style.display = "block";
