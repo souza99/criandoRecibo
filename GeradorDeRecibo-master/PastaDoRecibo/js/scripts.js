@@ -85,8 +85,14 @@ gerar.addEventListener("click", function(){
         var dinheiroGerarContent = document.getElementById("dinheiroGerar");
         dinheiroGerarContent.style.display = "block";
         var retornoRecibo = "Recebi(emos) de " + nome_pagador + "- CPF/CNPJ nº " + cpf + ", a importância de " + valor + " referente à " + referente;
+        var info = "Nome do emisor: " + nome_emissor;
+        var inf02 = "Telefone: " + telefone;
         console.log(retornoRecibo);
-        return retornoRecibo;
+        console.log(info);
+        console.log(inf02);
+        document.write(retornoRecibo + "/ ");
+        document.write(info + "/ ");
+        document.write(inf02);
     }else if(pixGerar == true){
         var pixGerarContent = document.getElementById("pixGerar");
         pixGerarContent.style.display = "block";
