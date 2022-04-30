@@ -1,36 +1,42 @@
-
-.container{
-    width:100%;
+.container {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: #6C7A89;
+    background: #f1f1f1;
 }
 
-.box{
+.box {
     margin-top: 5%;
     width: 60%;
-    height: 100%;
-    background-color: #ceacac;
+    height: 80%;
+    background-color: #ffffff;
     border-radius: 15px;
 }
 
-.body{
+.body {
     margin: 0px;
 }
 
-input{
+input {
     border-radius: 5px;
+    border-color: #aebbd0;
+    height: 25px;
+    border-width: 1px;
 }
 
-.itens{
+.itens {
     display: flex;
     margin-left: 12px;
 }
 
-.buttons{
+.buttons {
     background-color: #3273dc;
     color: #ffffff;
     border-radius: 5px;
+}
+
+h3 {
+    color: #5c5e61;
 }

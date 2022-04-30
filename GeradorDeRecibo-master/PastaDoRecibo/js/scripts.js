@@ -20,7 +20,7 @@ var pixGerar = false;
 var chequeGerar = false;
 var transferenciaGerar = false;
 
-pix.addEventListener("click", function(){
+pix.addEventListener("click", function () {
     pixContainer.style.display = "block";
     chequeContainer.style.display = "none";
     transferenciaContainer.style.display = "none";
@@ -30,7 +30,7 @@ pix.addEventListener("click", function(){
     transferenciaGerar = false;
 });
 
-cheque.addEventListener("click", function(){
+cheque.addEventListener("click", function () {
     chequeContainer.style.display = "block";
     pixContainer.style.display = "none";
     transferenciaContainer.style.display = "none";
@@ -40,7 +40,7 @@ cheque.addEventListener("click", function(){
     transferenciaGerar = false;
 });
 
-transferencia.addEventListener("click", function(){
+transferencia.addEventListener("click", function () {
     transferenciaContainer.style.display = "block";
     pixContainer.style.display = "none";
     chequeContainer.style.display = "none";
@@ -50,7 +50,7 @@ transferencia.addEventListener("click", function(){
     transferenciaGerar = true;
 });
 
-dinheiro.addEventListener("click", function(){
+dinheiro.addEventListener("click", function () {
     transferenciaContainer.style.display = "none";
     pixContainer.style.display = "none";
     chequeContainer.style.display = "none";
@@ -60,7 +60,7 @@ dinheiro.addEventListener("click", function(){
     transferenciaGerar = false;
 });
 
-cartao.addEventListener("click", function(){
+cartao.addEventListener("click", function () {
     transferenciaContainer.style.display = "none";
     pixContainer.style.display = "none";
     chequeContainer.style.display = "none";
@@ -70,7 +70,7 @@ cartao.addEventListener("click", function(){
     transferenciaGerar = false;
 })
 
-gerar.addEventListener("click", function(){
+gerar.addEventListener("click", function () {
     var valor = document.getElementById("valor").value;
     var nome_pagador = document.getElementById("nome_pagador").value;
     var cpf = document.getElementById("cpf").value;
@@ -83,8 +83,8 @@ gerar.addEventListener("click", function(){
     var quem_recebeu = document.getElementById("quem_recebeu").value;
     var banco = document.getElementById("banco").value;
     var chave = document.getElementById("chave").value;
-    
-    if(dinheiroGerar == true){
+
+    if (dinheiroGerar == true) {
         var dinheiroGerarContent = document.getElementById("dinheiroGerar");
         dinheiroGerarContent.style.display = "block";
         var retornoRecibo = "Recebi(emos) de " + nome_pagador + "- CPF/CNPJ nº " + cpf + ", a importância de " + valor + " referente à " + referente;
@@ -96,12 +96,13 @@ gerar.addEventListener("click", function(){
         document.write(retornoRecibo + "/ ");
         document.write(info + "/ ");
         document.write(inf02);
-    }else if(pixGerar == true){
+    } else if (pixGerar == true) {
         var pixGerarContent = document.getElementById("pixGerar");
         pixGerarContent.style.display = "block";
-        var retornoRecibo = "Recebi(emos) de " + nome_pagador +" - CPF/CNPJ nº "+ cpf +", a importância de um centavos referente à "+referente +". Para maior clareza firmo(amos) o presente recibo para que produza os seus efeitos, dando plena, rasa e irrevogável quitação, pelo valor recebido.Pagamento recebido por: " + quem_recebeu + " - chave pix: "+ chave +" - "+ banco;
-    }else if(chequeGerar == true){
+        var retornoRecibo = "Recebi(emos) de " + nome_pagador + " - CPF/CNPJ nº " + cpf + ", a importância de um centavos referente à " + referente + ". Para maior clareza firmo(amos) o presente recibo para que produza os seus efeitos, dando plena, rasa e irrevogável quitação, pelo valor recebido.Pagamento recebido por: " + quem_recebeu + " - chave pix: " + chave + " - " + banco;
+        document.write(retornoRecibo);
+    } else if (chequeGerar == true) {
         var chequeGerarContent = document.getElementById("chequeGerar");
         chequeGerarContent.style.display = "block";
-    }else if(transferenciaGerar == true){}
+    } else if (transferenciaGerar == true) { }
 });

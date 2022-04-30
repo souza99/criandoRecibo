@@ -5,212 +5,210 @@
     <script src="js/scripts.js" defer></script>
 </head>
 
-<body>
+<body class="container">
+    <div class="box">
 
-    <div class="container">
-        <div class="box">
-
-            <div class="row itens">
-                <div class="col" style="width: 100%;">
-                    <h3>Valor: </h3>
-                    <input type="string" id="valor"/>
-                </div>
-
-                <div class="col" style="width: 100%">
-                    <h3>Nome do Pagador: </h3>
-                    <input type="string" id="nome_pagador"/>
-                </div>
+        <div class="row itens">
+            <div class="col" style="width: 100%;">
+                <h3>Valor: </h3>
+                <input style="width: 250px;" type="string" id="valor" />
             </div>
 
-            <div class="row itens">
-                <div class="col" style="width: 100%;">
-                    <h3>CPF ou CNPJ (opcional): </h3>
-                    <input type="string" id="cpf"/>
-                </div>
+            <div class="col" style="width: 100%">
+                <h3>Nome do Pagador: </h3>
+                <input style="width: 250px;" type="string" id="nome_pagador" />
+            </div>
+        </div>
 
-                <div class="col" style="width: 100%;">
-                    <h3>Referente à: </h3>
-                    <input type="string" id="referente"/>
-                </div>
+        <div class="row itens">
+            <div class="col" style="width: 100%;">
+                <h3>CPF ou CNPJ (opcional): </h3>
+                <input style="width: 250px;" type="string" id="cpf" />
             </div>
 
-            <div class="row itens">
-                <div class="col" style="width:100%;">
-                    <h3>Cidade: </h3>
-                    <input type="string" id="cidade"/>
-                </div>
+            <div class="col" style="width: 100%;">
+                <h3>Referente à: </h3>
+                <input style="width: 250px;" type="string" id="referente" />
+            </div>
+        </div>
 
-                <div class="col" style="width: 100%;">
-                    <h3>Data: </h3>
-                    <input type="date" id="data"/>
-                </div>
+        <div class="row itens">
+            <div class="col" style="width:100%;">
+                <h3>Cidade: </h3>
+                <input style="width: 250px;" type="string" id="cidade" />
             </div>
 
-            <div class="row itens">
-                <div class="col" style="width: 100%;">
-                    <h3>Nome do Emissor: </h3>
-                    <input type="string" id="nome_emissor"/>
-                </div>
+            <div class="col" style="width: 100%;">
+                <h3>Data: </h3>
+                <input style="width: 250px;" type="date" id="data" />
+            </div>
+        </div>
 
-                <div class="col" style="width: 100%;">
-                    <h3>Telefone (opcional): </h3>
-                    <input type="string" id="telefone"/>
-                </div>
+        <div class="row itens">
+            <div class="col" style="width: 100%;">
+                <h3>Nome do Emissor: </h3>
+                <input style="width: 250px;" type="string" id="nome_emissor" />
             </div>
 
-            <div class="col itens">
-                <div style="width: 100%;">
-                    <h3>CPF ou CNPJ (opcional): </h3>
-                    <input type="string" id="cpf_2"/>
-                </div>
+            <div class="col" style="width: 100%;">
+                <h3>Telefone (opcional): </h3>
+                <input style="width: 250px;" type="string" id="telefone" />
+            </div>
+        </div>
+
+        <div class="col itens">
+            <div style="width: 100%;">
+                <h3>CPF ou CNPJ (opcional): </h3>
+                <input style="width: 250px;" type="string" id="cpf_2" />
+            </div>
+        </div>
+
+        <div class="col" style="justify-content: center;">
+            <div class="row">
+                <h3>Forma de pagamento</h3>
+            </div>
+            <div class="row" style="display: flex;">
+                <input type="radio" id="dinheiro" name="drone" value="dinheiro">
+                <label for="dinheiro">Dinheiro</label>
+                <input type="radio" id="pix" name="drone" value="pix">
+                <label for="pix">Pix</label>
+                <input type="radio" id="cheque" name="drone" value="cheque">
+                <label for="cheque">Cheque</label>
+                <input type="radio" id="transferencia" name="drone" value="transferencia">
+                <label for="transferencia">Transferência/Depósito</label>
+                <input type="radio" id="cartao" name="drone" value="cartao">
+                <label for="cartao">Cartão de Crédito/Débito</label>
             </div>
 
-            <div class="col" style="justify-content: center;">
-                <div class="row">
-                    <h3>Forma de pagamento</h3>
-                </div>
-                <div class="row" style="display: flex;">
-                    <input type="radio" id="dinheiro" name="drone" value="dinheiro">
-                    <label for="dinheiro" >Dinheiro</label>
-                    <input type="radio" id="pix" name="drone" value="pix">
-                    <label for="pix">Pix</label>
-                    <input type="radio" id="cheque" name="drone" value="cheque">
-                    <label for="cheque">Cheque</label>
-                    <input type="radio" id="transferencia" name="drone" value="transferencia">
-                    <label for="transferencia">Transferência/Depósito</label>
-                    <input type="radio" id="cartao" name="drone" value="cartao">
-                    <label for="cartao">Cartão de Crédito/Débito</label>
-                </div>
+            <div id="pixContainer" style="display: none;">
 
-                <div id="pixContainer" style="display: none;">
-
-                    <div class="row itens" style="display: flex">
+                <div class="row itens" style="display: flex">
 
                     <div class="col" style="width: 100%">
                         <h3>Quem recebeu ?</h3>
-                        <input type="string" id="quem_recebeu"/>
+                        <input style="width: 250px;" type="string" id="quem_recebeu" />
                     </div>
 
                     <div class="col" style="width: 100%">
                         <h3>Instituição/Banco: </h3>
-                        <input type="string" id="banco"/>
+                        <input style="width: 250px;" type="string" id="banco" />
                     </div>
 
                     <div class="col" style="width: 100%">
                         <h3>Chave: </h3>
-                        <input type="string" id="chave"/>
-                    </div>
-
+                        <input style="width: 250px;" type="string" id="chave" />
                     </div>
 
                 </div>
 
-                <div id="chequeContainer" style="display: none;">
-                    <div class="row itens" style="display: flex">
-                
+            </div>
+
+            <div id="chequeContainer" style="display: none;">
+                <div class="row itens" style="display: flex">
+
                     <div class="col" style="width: 100%">
                         <h3>N° do cheque: </h3>
-                        <input type="string" />
+                        <input style="width: 250px;" type="string" />
                     </div>
 
                     <div class="col" style="width: 100%">
                         <h3>Banco: </h3>
-                        <input type="string" />
+                        <input style="width: 250px;" type="string" />
                     </div>
 
                     <div class="col" style="width: 100%">
                         <h3>Agência: </h3>
-                        <input type="string" />
+                        <input style="width: 250px;" type="string" />
                     </div>
 
                     <div class="col" style="width: 100%">
                         <h3>Bom para...: </h3>
-                        <input type="string" />
+                        <input style="width: 250px;" type="string" />
                         <p>Opcional</p>
-                    </div>
-                    
                     </div>
 
                 </div>
 
-                <div id="transferenciaContainer" style="display: none">
-
-                    <div class="itens row" style="display: flex;">
-
-                        <div class="col" style="width: 100%;">
-                            <h3>Conta: </h3>
-                            <input type="string" />
-                        </div>
-    
-                        <div class="col" style="width: 100%;">
-                            <h3>Agência: </h3>
-                            <input type="string" />
-                        </div>
-    
-                        <div class="col" style="width: 100%;">
-                            <h3>Data: </h3>
-                            <input type="string" />
-                        </div>
-
-                    </div>
-
-                    <div class="itens row" style="display: flex;">
-
-                        <div class="col" style="width: 100%;">
-                            <h3>Banco: </h3>
-                            <input type="string" />
-                        </div>
-
-                        <div class="col" style="width: 100%;">
-                            <h3>Favorecido: </h3>
-                            <input type="string" />
-                        </div>
-
-                        <div class="col" style="width: 100%;">
-                            <h3>Nº do documento:: </h3>
-                            <input type="string" />
-                        </div>
-
-                    </div>
-                
             </div>
-            
+
+            <div id="transferenciaContainer" style="display: none">
+
+                <div class="itens row" style="display: flex;">
+
+                    <div class="col" style="width: 100%;">
+                        <h3>Conta: </h3>
+                        <input style="width: 250px;" type="string" />
+                    </div>
+
+                    <div class="col" style="width: 100%;">
+                        <h3>Agência: </h3>
+                        <input style="width: 250px;" type="string" />
+                    </div>
+
+                    <div class="col" style="width: 100%;">
+                        <h3>Data: </h3>
+                        <input style="width: 250px;" type="string" />
+                    </div>
+
+                </div>
+
+                <div class="itens row" style="display: flex;">
+
+                    <div class="col" style="width: 100%;">
+                        <h3>Banco: </h3>
+                        <input style="width: 250px;" type="string" />
+                    </div>
+
+                    <div class="col" style="width: 100%;">
+                        <h3>Favorecido: </h3>
+                        <input style="width: 250px;" type="string" />
+                    </div>
+
+                    <div class="col" style="width: 100%;">
+                        <h3>Nº do documento:: </h3>
+                        <input style="width: 250px;" type="string" />
+                    </div>
+
+                </div>
+
+            </div>
+
             <div class="col">
                 <div class="row itens">
                     <h3>Duas vias?</h3>
                 </div>
 
                 <div class="row itens">
-                    <input type="checkbox" id="scales" name="scales"
-                           checked>
+                    <input type="checkbox" id="scales" name="scales" checked>
                     <label for="scales">Sim</label>
                 </div>
-                
-            </div>
 
-            </div>
-
-            <div class="itens" id="gerar" style="margin-bottom: 12px; margin-top: 12px; height: 32px;">
-                <button class="buttons"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
-                    <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
-                    <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
-                  </svg> Gerar recibo</button>
-            </div>
-
-            <div id="dinheiroGerar" style="display: none">
-            </div>
-
-            <div id="pixGerar" style="display: none">
-                slfsfklsjfslkdfjskdlf
-            </div>
-    
-            <div id="chequeGerar" style="display: none">
-                dwjljwekelw
             </div>
 
         </div>
 
+        <div class="itens" id="gerar" style="margin-bottom: 12px; margin-top: 12px; height: 32px;">
+            <button class="buttons"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                    <path
+                        d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z" />
+                    <path
+                        d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
+                </svg> Gerar recibo</button>
+        </div>
+
+        <div id="dinheiroGerar" style="display: none">
+        </div>
+
+        <div id="pixGerar" style="display: none">
+        </div>
+
+        <div id="chequeGerar" style="display: none">
+            dwjljwekelw
+        </div>
+
     </div>
+
 
 </body>
 
